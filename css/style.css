@@ -1,0 +1,382 @@
+::root{
+--main-color:#10cab7;
+--pad:60px;
+--new: #2c4755;
+}
+.container{
+margin: auto;
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+}	
+@media (min-width: 768px){
+.container{
+width:750px
+}
+}
+@media (min-width: 992px){
+.container{
+width:970px;
+}
+}
+@media (min-width: 1200px){
+.container{
+width:1170px;
+}
+}
+.header .container{
+display: flex;
+justify-content: space-between;
+}
+h3.logo{
+margin: 0;
+padding: 0;
+font-size: 50px;
+user-select: none;
+}
+.header .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+.icon {
+width: 50px;
+display: flex;
+justify-content:flex-end;
+flex-wrap: wrap;
+}
+.icon span{
+margin: 5px
+}
+.icon span:first-child{
+width: 100%;
+height: 3px;
+background: #222;
+}
+.icon span:last-child{
+width: 100%;
+height: 3px;
+background: #222;
+}
+.icon  span:nth-child(2){
+width: 50%;
+height: 3px;
+background: #222;
+transition: 0.3s
+}
+.icon:hover > span{
+width: 100%
+}
+ul{
+position: absolute;
+right: 20px;
+top: 100%;
+list-style: none;
+padding: 10px;
+background: #eee;
+min-width: 200px;
+display: none;
+z-index: 8768;
+}
+ul:before{
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+border: 20px solid;
+right: 0;
+top: -40px;
+border-color: transparent transparent #eee transparent;
+}
+ul li{
+padding: 20px;
+border-bottom: 1px solid #333
+}
+ul li a{
+color: #333;
+transition: 0.5s
+}
+ul li a:hover{
+padding-left: 20px
+}
+.icon:hover + ul , ul:hover{
+display: initial;
+}
+.landing{
+position: relative;
+background-image: url(https://www.hdwallpapers.in/thumbs/2022/black_and_white_image_of_snow_covered_mountains_trees_4k_hd_nature-t2.jpg);;
+background-size: cover;
+height: calc(100vh - 64px);
+background-position: bottom;
+display: flex;
+}
+.landing .text{
+text-align: center;
+}
+.landing .text h1{
+color: var(--main-color)
+}
+.landing .text p{
+color: #999;
+}
+.featurs{
+padding-top: var(--pad);
+padding-bottom: var(--pad);
+background: #f6f6f6;
+text-align: center;
+}
+.featurs .container{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+grid-gap: 30px;
+}
+.featurs .container h3{
+margin: 30px 0;
+font-weight: 800;
+font-size: revert;
+}
+.featurs .container p{
+color: #777;
+line-height: 1.8;
+}
+.featurs .container span{
+font-size: 50px;
+color: var(--main-color)
+}
+.spicial {
+text-align: center;
+font-size: 100px;
+font-weight: 800;
+color: #ebeced;
+letter-spacing: -3px;
+margin: 0;
+}
+.spicial  +  p{
+font-size: 20px;
+margin-top: -20px;
+text-align: center;
+color: #777
+}
+@media (max-width: 767px){
+.spicial {
+font-size: 50px;
+}
+.spicial  +  p{
+margin: -10px;
+}
+}
+.services{
+padding-top: var(--pad);
+padding-bottom: var(--pad);
+}
+.content{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+margin-top: 100px;
+grid-gap: 30px;
+text-align: center;
+}
+.content .srv{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.content .text{
+flex: 1;
+text-align: center;
+}
+.content span{
+color: var(--main-color);
+font-size: 40px
+}
+.content .text h3{
+margin: 20px;
+font-weight: 800;
+font-size: 25px
+}
+.content .text p{
+line-height: 1.8;
+color: #777
+}
+.content .col .image img{
+width: 260px;
+height: 300px
+}
+.content .col .image {
+position: relative;
+text-align: center;
+}
+.content .col .image::before{
+content: '';
+position: absolute;
+right: 0;
+width: 100px;
+height: calc(100% + 80px);
+background: var(--new);
+top: -45px;
+z-index: -1;
+}
+@media (max-width: 991px){
+.content .col .image{
+display: none;
+}
+.srv{
+flex-direction:column;
+}
+}
+@media (max-width: 355px){
+.content , .featurs .container , .pro-content {
+grid-template-columns: repeat(auto-fill , minmax(150px,1fr)) !important;
+}
+}
+.porfolio{
+padding-top: var(--pad);
+padding-bottom: var(--pad);
+background: #f9f9f9
+}
+.pro-content{
+margin-top: 80px;
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+grid-gap: 30px;
+text-align: center;
+}
+.pro-content h3{
+margin: 0;
+padding: 0;
+font-size: 25px;
+margin-top: 20px;
+font-weight: 800;
+}
+.pro-content p{
+line-height: 1.8;
+color: #777;
+}
+.pro-content img{
+max-width: 100%
+}
+.about{
+padding-bottom: calc(var(--pad) + 60px);
+padding-top:var(--pad);
+}
+.about-content{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.about .image{
+width: 400px;
+height: 400px;
+position: relative;
+
+}
+.about .image img{
+max-width: 100%;
+max-height: 100%;
+margin-left: 20px
+}
+.about .text{
+width: 500px;
+margin: auto;
+scale:1.2;
+max-width: 100%;
+}
+.about .text hr{
+display: inline-block;
+width: 50%;
+border-color: var(--main-color)
+}
+.about .text p:first-child{
+font-weight: bold;
+}
+.about .text p:last-child{
+color: #777;
+line-height: 1.6
+}
+.about .image::before {
+content: '';
+width: 60px;
+height: calc(100% + 80px);
+background: #ebeced;
+position: absolute;
+top: -40px;
+z-index: -1;
+}
+.about .image::after{
+position: absolute;
+content: '';
+width: 60px;
+height: 70%;
+border-left: 60px solid var(--main-color);
+border-bottom: 60px solid var(--main-color);
+left: 180px;
+z-index: -1;
+top: -40px
+}
+@media (max-width: 1024px){
+.about-content{
+flex-direction: column;
+text-align: center;
+}
+.about .image:before ,
+.about .image:after{
+display: none;
+}
+.about .image{
+margin: 50px auto 50px auto;
+}}
+@media (max-width: 600px){
+.about .text{
+max-width: 90%
+}
+.about .image{
+width: 200px;
+height: 200px;
+}
+.contact h1 ,.contact-content a {
+font-size: 20px !important
+}
+}
+.contact{
+text-align: center;
+padding-top: var(--pad);
+padding-bottom: calc(var(--pad) + 60px);
+}
+.contact h1{
+color: var(--new);
+font-weight: 800
+}
+.contact h1 + a{
+color: var(--main-color);
+font-size: 30px;
+font-weight: 800
+}
+.social{
+font-size: 30px;
+margin-top: 20px;
+font-weight: 600
+}
+.social span{
+color: var(--new);
+font-size: 40px
+}
+.footer{
+text-align: center;
+background: var(--new);
+padding: 30px;
+color: #fff;
+}
+.footer span{
+color: var(--main-color);
+font-weight: bold;
+}
+html{
+-webkit-scroll-behavior: smooth;
+-moz-scroll-behavior: smooth;
+-o-scroll-behavior: smooth;
+}
+.services .image{
+margin-top:40px;
+}
